@@ -1,12 +1,12 @@
 .navbar {
-   margin: 2rem;
+   /* margin: 2rem; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
    
   }  
   .angies-logo {
-    height: 100%;
+    height: auto;
     max-width: 200px;
     border-radius: 10px;
   }
@@ -37,7 +37,7 @@
   } */
   
   .fa-bars {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 116, 214);
   }
   
   .nav-links-mobile {
@@ -48,27 +48,22 @@
     display: none;
   }
   
-  @media screen and (max-width: 760px) {
-    .navbar-logo {
-      color: rgb(151, 10, 10);
-      justify-self: start;
-      /* margin-left: 20px; */
-      cursor: pointer;
+  @media screen and (max-width: 768px) {
+    .angies-logo {
+      height: auto;
+      max-width: 150px;
+      border-radius: 10px;
     }
-    .NavbarItems {
-      position: relative;
-    }
-  
     .nav-menu {
       display: flex;
       flex-direction: column;
-      height: 50vh;
+      height: auto;
       position: absolute;
-      top: 80px;
+      top: 100px;
       left: auto;
       right: auto;
       opacity: 0;
-      /* transition: all 0.5s ease; */
+      transition: all 0.5s ease;
       overflow: hidden !important;
       pointer-events: none;
     }
@@ -79,7 +74,7 @@
     }
   
     .nav-menu.active {
-      background: #ffffff;
+      background-color: white;
       right: 0;
       opacity: 1;
       transition: all 0.5s ease;
@@ -88,11 +83,14 @@
       align-items: flex-start;
       pointer-events: auto;
       padding-left: 0;
-      border: 2px solid black;
+      z-index: 999;
+      gap: 2rem;
+      padding: 1.7rem 4px;
+      border: rgb(255, 116, 214) 2px solid;
     }
   
     .nav-links {
-      color: black;
+      color: rgb(124, 97, 195);
       text-decoration: none;
       /* padding: 0.5rem 1rem; */
       padding-left: 0.7rem;
@@ -131,7 +129,7 @@
     }
   
     .fa-times {
-      color: rgb(0, 0, 0);
+      color: rgb(124, 97, 195);
       font-size: 2rem;
     }
   
